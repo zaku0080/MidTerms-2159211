@@ -29,7 +29,7 @@ window.onload = function () {
     for (var i = 0; i < alphabet.length; i++) {
       letters.setAttribute('id', 'alphabet');
       list = document.createElement('li');
-      list.setAttribute('id', 'letter');
+      list.setAttribute('class', 'letter');
       list.innerHTML = alphabet[i];
       check();
       myButtons.appendChild(letters);
@@ -41,11 +41,11 @@ window.onload = function () {
   // Select Catagory
   var selectCat = function () {
     if (chosenCategory === categories[0]) {
-      catagoryName.innerHTML = "The Chosen Category Is class";
+      catagoryname.innerHTML = "The Chosen Category Is class";
     } else if (chosenCategory === categories[1]) {
-      catagoryName.innerHTML = "The Chosen Category Is Films";
+      catagoryname.innerHTML = "The Chosen Category Is Films";
     } else if (chosenCategory === categories[2]) {
-      catagoryName.innerHTML = "The Chosen Category Is Cities";
+      catagoryname.innerHTML = "The Chosen Category Is Cities";
     }
   }
 
@@ -57,10 +57,11 @@ window.onload = function () {
     for (var i = 0; i < word.length; i++) {
       correct.setAttribute('id', 'my-word');
       guess = document.createElement('li');
-      guess.setAttribute('id', 'guess');
+      guess.setAttribute('class', 'guess');
       if (word[i] === "-") {
         guess.innerHTML = "-";
         space = 1;
+
       } else {
         guess.innerHTML = "_";
       }
@@ -114,6 +115,7 @@ window.onload = function () {
     context.moveTo($pathFromx, $pathFromy);
     context.lineTo($pathTox, $pathToy);
     context.stroke(); 
+    context.lineWidth = 3;
 }
 
    frame1 = function() {
@@ -160,11 +162,14 @@ window.onload = function () {
     list.onclick = function () {
       var geuss = (this.innerHTML);
       this.setAttribute("class", "active");
-      this.onclick = null;
+      //this.addClass('class', 'green');
+      //this.onclick = null;
       for (var i = 0; i < word.length; i++) {
         if (word[i] === geuss) {
           geusses[i].innerHTML = geuss;
           counter += 1;
+          this.classList.remove("active");
+          this.classList.add("green");
         } 
       }
       var j = (word.indexOf(geuss));
