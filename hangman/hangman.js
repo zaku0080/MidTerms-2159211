@@ -76,6 +76,8 @@ window.onload = function () {
     showLives.innerHTML = "You have " + lives + " lives";
     if (lives < 1) {
       showLives.innerHTML = "Game Over";
+      var unclick = document.getElementById('alphabet');
+      unclick.classList.add("unclick");
 
     }
     for (var i = 0; i < geusses.length; i++) {

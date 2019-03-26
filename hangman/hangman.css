@@ -158,10 +158,12 @@ p{
 
 #alphabet li.green{
   background-color: green;
+  pointer-events: none;
 }
 
 #alphabet li.active{
   background-color: red;
+  pointer-events: none;
 }
 
 #mylives{
@@ -170,6 +172,9 @@ p{
   display:block;
 }
 
+.unclick{
+  pointer-events: none;
+}
 
 button{
   @include corners (5px);
@@ -191,6 +196,7 @@ button{
       color:$base-color;
     }
 }
+
 
 @media (max-width: 767px) {
   #alphabet {
