@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Quiz</title>
+
+	<script src="quiz.js"></script>
+	<link rel="stylesheet" type="text/css" href="quiz.css">
+
+</head>
+<body>
+
+	<form id="quiz" name="quiz">
+
+		<h1>Welcome to Java Script Quiz</h1>
+
+		<p>1. What does JS stands for?</p>
+		<input type="radio" id="q1" name="question1" value="Java Script">Java Script<br>
+		<input type="radio" id="q1" name="question1" value="Java Script">asdfa<br>
+		<input type="radio" id="q1" name="question1" value="Java Script">Pogi<br>
+		<input type="radio" id="q1" name="question1" value="Java Script">Pangit<br>
+
+		<p>2. What does DOM stands for?</p>
+		<input type="radio" id="q2" name="question2" value="Document Object Model">Bogart<br>
+		<input type="radio" id="q2" name="question2" value="Document Object Model">neko<br>
+		<input type="radio" id="q2" name="question2" value="Document Object Model">Document Object Model<br>
+		<input type="radio" id="q2" name="question2" value="Document Object Model">Pangit<br>
+
+		<input type="button" id="button" value="Done" onclick="done();">
+
+	</form>
+
+	<div id="after_submit">
+		<p id="numberOfCorrect"></p>
+	</div>
+		
+</body>
+</html>
