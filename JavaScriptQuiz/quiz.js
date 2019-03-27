@@ -29,22 +29,8 @@ function done() {
 	
 	if (question5 == "It can add/modify/remove") {
 		correct++;
-	}
-	
-	var messages = ["Good job!", "That's just okay", "You really need to do better!"];
-	
-	var range;
-	if (correct < 1) {
-		range = 2;
-	}
-	if (correct > 0 && correct < 5) {
-		range = 1;
-	}
-	if (correct > 3){
-		range = 0;
-	}
+	}	
 	
 	document.getElementById("after_submit").style.visibility = "visible";
-	alert(document.getElementById("message").innerHTML = messages[range]);
 	alert(document.getElementById("numberOfCorrect").innerHTML = "You got " + correct + " correct answers.");
 }

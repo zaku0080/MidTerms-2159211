@@ -2,13 +2,24 @@ body {
 	font-family: 'Lato', sans-serif;
 }
 
+.container{
+	max-width: 960px;
+	width: 96%;
+	margin: auto;
+}
+
+.content h1{
+	background: skyblue;
+	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
 #quiz{
-	margin-left: 10px;
+	max-width: 960px;
+	width: 96%;
+	margin: auto;
 	background: #d2def2;
-	padding: 50px 100px 50px 100px;
-	width: 1675px;
-	border-radius; 20px;
-	float: left;
 }
 
 input {
