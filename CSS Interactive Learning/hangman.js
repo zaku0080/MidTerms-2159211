@@ -82,6 +82,8 @@ window.onload = function () {
     }
     for (var i = 0; i < geusses.length; i++) {
       if (counter + space === geusses.length) {
+        var unclick = document.getElementById('alphabet');
+        unclick.classList.add("unclick");
         showLives.innerHTML = "You Win!";
       }
     }
