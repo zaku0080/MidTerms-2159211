@@ -9,7 +9,8 @@ body{
 	float:left;
 }
 
-#item, #item1, #item2{
+
+.itemd, .itema{
 	position: relative;
 	border: 1px solid;
 	padding: 0;
@@ -20,27 +21,19 @@ body{
 	text-transform: uppercase;
 }
 
-#hints-across{
-	text-align: left;
-	padding-left: 55%;
-	padding-top: 10px;
+.itemd{
+	background-color: black;
 }
 
-#hints-down{
-	text-align: left;
-	padding-left: 70%;
-	padding-top: 10px;
-}
-
-#item1:valid, #item2:valid{
+.itema:valid, .itema:valid{
 	background-color: blue;
 }
 
-#item1:invalid, #item2:invalid{
+.itema:invalid, .itema:invalid{
 	background-color: none;
 }
 
-#complete{
+/* #complete{
 	position: absolute;
 	z-index: 1000;
 	top:50%;
@@ -52,4 +45,4 @@ body{
 
 	opacity: 0;
 	transition: opacity 0.3s ease-in-out;
-}
+}*/
