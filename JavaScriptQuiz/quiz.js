@@ -7,6 +7,8 @@ function done() {
 	var question5 = document.quiz.question5.value;
 	var question6 = document.quiz.question6.value;
 	var question7 = document.quiz.question7.value;
+	var question8 = document.quiz.question8.value;
+	var question9 = document.quiz.question9.value;
 	var correct = 0;
 
 	if (question1 == "JavaScript") {
@@ -53,6 +55,20 @@ function done() {
 	if (question7 == "Document Object Model") {
 		correct++;
 	}
+	
+	if (question8 == "client side and admin side") {
+		correct++;
+	}
+	
+	if (question8 == "client side and the admin side") {
+		correct++;
+	}
+	
+	if (question9 == "Anchor, Applet, Attr") {
+		correct++;
+	}
+	
+	
 	document.getElementById("after_submit").style.visibility = "visible";
 	alert(document.getElementById("numberOfCorrect").innerHTML = "You got " + correct + " correct answers.");
 }
