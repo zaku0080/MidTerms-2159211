@@ -2,6 +2,12 @@ body{
 	background: cyan;
 }
 
+tr{
+	font-family: Georgia;
+	font-size: 1.7em;
+
+}
+
 #board{
 	display: inline-grid;
 	grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto ; 
@@ -10,7 +16,7 @@ body{
 }
 
 
-.itemd, .itema{
+.itemd, .itema, .itema1{
 	position: relative;
 	border: 1px solid;
 	padding: 0;
@@ -25,24 +31,22 @@ body{
 	background-color: black;
 }
 
-.itema:valid, .itema:valid{
+.itema:valid{
 	background-color: blue;
 }
 
-.itema:invalid, .itema:invalid{
+.itema:invalid{
 	background-color: none;
 }
 
-/* #complete{
-	position: absolute;
-	z-index: 1000;
-	top:50%;
-	left: 50%;
-	font-size: 100px;
-	line-height: 1;
-	color: red;
-	width: 100%;
+input#reset{
+	background-color: white;
+	border: 2px solid green;
+	padding: 15px;
+	text-align: center;
+	display: inline-block;
+}
 
-	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
-}*/
+input#reset:hover{
+	background-color: green;
+}
