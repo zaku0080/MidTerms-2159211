@@ -41,11 +41,7 @@ window.onload = function () {
   // Select Catagory
   var selectCat = function () {
     if (chosenCategory === categories[0]) {
-      catagoryname.innerHTML = "The Chosen Category Is class";
-    } else if (chosenCategory === categories[1]) {
-      catagoryname.innerHTML = "The Chosen Category Is Films";
-    } else if (chosenCategory === categories[2]) {
-      catagoryname.innerHTML = "The Chosen Category Is Cities";
+      catagoryname.innerHTML = "CSS Interactive Learning";
     }
   }
 
@@ -102,7 +98,7 @@ window.onload = function () {
     var myStickman = document.getElementById("stickman");
     context = myStickman.getContext('2d');
     context.beginPath();
-    context.strokeStyle = "#fff";
+    context.strokeStyle = "#FFA500";
     context.lineWidth = 2;
   };
   
@@ -191,10 +187,9 @@ window.onload = function () {
   // Play
   play = function () {
     categories = [
-        ["type", "class", "universal", "combinator", "hull", "manchester-city", "newcastle-united"],
-        ["alien", "dirty-harry", "gladiator", "finding-nemo", "jaws"],
-        ["manchester", "milan", "madrid", "amsterdam", "prague"]
-    ];
+        ["attribute selector", "universal selector", "pseudo element", "adjacent sibling combinator", "sibling combinator", "descendant combinator",
+		"class selector","id selector","cascading style sheet","type selector"]
+    ]
 
     chosenCategory = categories[Math.floor(Math.random() * categories.length)];
     word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
@@ -219,9 +214,7 @@ window.onload = function () {
     hint.onclick = function() {
 
       hints = [
-        [".info", "#info", "*", "&", "Once managed by Phil Brown", "2013 FA Cup runners up", "Gazza's first club"],
-        ["Science-Fiction horror film", "1971 American action film", "Historical drama", "Anamated Fish", "Giant great white shark"],
-        ["Northern city in the UK", "Home of AC and Inter", "Spanish capital", "Netherlands capital", "Czech Republic capital"]
+        [".info", "#info", "*", "&", "Once managed by Phil Brown", "2013 FA Cup runners up", "Gazza's first club"]
     ];
 
     var catagoryIndex = categories.indexOf(chosenCategory);

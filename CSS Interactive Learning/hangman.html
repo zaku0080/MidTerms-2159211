@@ -9,28 +9,29 @@
 
 </head>
 <body>
-  <div class="wrapper">
-     <h1>Hangman</h1>
-      <h2>CSS Category</h2>
-      <p>Use the alphabet below to guess the word, or click hint to get a clue. </p>
-
-  </div>
-  <div class="wrapper">
-  	<p id="catagoryname">
-      <div id="hold">
-      </div>
-      <p id="mylives"></p>
-      <div id="buttons">
-      </div>  
-      <p id="clue"></p>  
-       <canvas id="stickman"></canvas>
-      <div class="container" style="text-align: center;">
-      	<br>
-        <button id="hint">Hint</button>
-        <button id="reset">Play again</button>
-      </div>
-  </div>
-
+	<div class="play-area-row">
+		<h1>Hangman</h1>
+		<p>Use the alphabet below to guess the word, or click hint to get a clue. </p>
+	</div>
+	<div class="play-area-row">
+		<div class="play-area-column-2">
+			<canvas id="stickman"></canvas>
+			<p id="mylives"></p>
+		</div>
+		<div class="play-area-column-2">
+			<p id="catagoryname">
+			<div id="hold"></div>
+			<div id="buttons"></div>  
+			<p id="clue"></p> 
+		</div>
+	</div>
+	<div class="play-area-row">
+		<div class="container" style="text-align: center;">
+			<br>
+			<button id="hint">Hint</button>
+			<button id="reset">Play again</button>
+		</div>
+	</div>
 </body>
 
 </html>
