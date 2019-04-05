@@ -1,0 +1,18 @@
+  // Show lives
+   comments = function () {
+    showLives.innerHTML = "You have " + lives + " lives";
+    if (lives < 1) {
+      showLives.innerHTML = "Game Over";
+      var unclick = document.getElementById('alphabet');
+      unclick.classList.add("unclick");
+
+      alert(showLives.innerHTML = "You lost!");
+    }
+    for (var i = 0; i < geusses.length; i++) {
+      if (counter + space === geusses.length) {
+        showLives.innerHTML = "You Win!";
+
+        alert(showLives.innerHTML = "Congratulations!");
+      }
+    }
+  }
