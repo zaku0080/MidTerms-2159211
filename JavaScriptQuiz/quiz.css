@@ -1,5 +1,9 @@
-body {
-	font-family: 'Lato', sans-serif;
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Abadi MT Condensed;
+	background: url(cloud.jpg) no-repeat;
+	background-size: cover;
 }
 
 .container{
@@ -9,17 +13,22 @@ body {
 }
 
 .content h1{
-	background: skyblue;
+	background: lightgrey;
 	padding: 10px;
 	border-radius: 5px;
 	margin-bottom: 20px;
+	font-family: Abadi MT Condensed Light;
+	font-size: 60px;
+	letter-spacing: 2px
 }
 
 #quiz{
-	max-width: 960px;
-	width: 96%;
+	max-width: 950px;
+	background: lightgrey;
+	padding: 40px;
 	margin: auto;
-	background: #d2def2;
+	margin-top: 5%;
+	border-radius: 5px;
 }
 
 input {
