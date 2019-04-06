@@ -12,14 +12,18 @@ body{
 	margin: auto;
 }
 
-.content h1{
-	background: lightgrey;
+.content span{
+  	text-transform: uppercase;
+  	display: block;
+}
+.text{
 	padding: 10px;
 	border-radius: 5px;
-	margin-bottom: 20px;
-	font-family: Abadi MT Condensed Light;
-	font-size: 60px;
-	letter-spacing: 2px
+  	font-size: 70px;
+  	letter-spacing: 8px;
+  	margin-bottom: 20px;
+  	background: lightgrey;
+  	animation: text 3s 1;
 }
 
 #quiz{
@@ -62,4 +66,20 @@ input {
 
 #numberOfCorrect {
 	visibility: hidden;
+}
+
+
+@keyframes text {
+  0%{
+    color: black;
+    margin-bottom: -40px;
+  }
+  30%{
+    letter-spacing: 25px;
+    margin-bottom: -40px;
+  }
+  85%{
+    letter-spacing: 8px;
+    margin-bottom: -40px;
+  }
 }
