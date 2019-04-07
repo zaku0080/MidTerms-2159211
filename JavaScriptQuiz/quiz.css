@@ -1,33 +1,6 @@
-body{
-	margin: 0;
-	padding: 0;
-	font-family: Abadi MT Condensed;
-	background: url(cloud.jpg) no-repeat;
-	background-size: cover;
-}
-
-.container{
-	max-width: 960px;
-	width: 96%;
-	margin: auto;
-}
-
-.content span{
-  	text-transform: uppercase;
-  	display: block;
-}
-.text{
-	padding: 10px;
-	border-radius: 5px;
-  	font-size: 70px;
-  	letter-spacing: 8px;
-  	margin-bottom: 20px;
-  	background: lightgrey;
-  	animation: text 3s 1;
-}
-
-#quiz{
-	max-width: 950px;
+.header{
+	display: block;
+	max-width: 900px;
 	background: lightgrey;
 	padding: 40px;
 	margin: auto;
@@ -35,9 +8,48 @@ body{
 	border-radius: 5px;
 }
 
-input {
-	margin-botton: 20px;
+span{
+	font-size: 70px;
 }
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Abadi MT Condensed;
+	background: url(cloud.jpg) no-repeat;
+	background-size: cover;
+
+}
+
+.question{
+	border-radius: 10px
+	margin-top: 5px;
+	margin-left: 2%;
+	margin-right: 2%
+	margin-bottom: 2%;
+	padding-bottom: 2%;
+}
+
+#quiz{
+	max-width: 960px;
+	background: lightgrey;
+	padding: 40px;
+	margin: auto;
+	margin-top: 5%;
+	border-radius: 5px;
+}
+
+
+.container{
+	max-width: 980px;
+	width: 96%;
+	margin: auto;
+}
+
+button{
+	margin-bottom: 2%;
+}
+
 
 #button {
 	background: green;
@@ -55,31 +67,4 @@ input {
 	border: 1px solid green;
 	color: black;
 	cursor: pointer;
-}
-#after_submit{
-	visibility: hidden;
-}
-
-#message {
-	visibility: hidden;
-}
-
-#numberOfCorrect {
-	visibility: hidden;
-}
-
-
-@keyframes text {
-  0%{
-    color: black;
-    margin-bottom: -40px;
-  }
-  30%{
-    letter-spacing: 25px;
-    margin-bottom: -40px;
-  }
-  85%{
-    letter-spacing: 8px;
-    margin-bottom: -40px;
-  }
 }

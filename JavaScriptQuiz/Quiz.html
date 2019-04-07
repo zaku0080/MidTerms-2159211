@@ -2,114 +2,126 @@
 <html>
 <head>
 	<title>JavaScript Quiz</title>
-
 	<script src="quiz.js"></script>
 	<link rel="stylesheet" type="text/css" href="quiz.css">
-
 </head>
 <body>
-	<div class="container">
-		<div class="content">
-			<span align="center" class="text">Welcome to Java Script Quiz</span>
-				<form id="quiz" name="quiz">
-
-					<p>1. What does "JS" stands for?</p>
-					<input type="texbox" name="question1">
-
-					<p>2. What does DOM stands for?</p>
-					<input type="texbox" name="question2">
-				
-					<p>3. What does DOM means?</p>
-					<input type="radio" id="mc" name="question3" value="a">building fast and scalable network applications.<br>
-					<input type="radio" id="mc" name="question3" value="b">code is written into an HTML page.<br>
-					<input type="radio" id="mc" name="question3" value="c">is most commonly used as a client side scripting language<br>
-					<input type="radio" id="mc" name="question3" value="is an application programming interface">is an application programming interface (API) for HTML and XML documents.<br>
-				
-					<p>4. What does DOM represents?</p>
-					<input type="radio" id="mc" name="question4" value="d">an object-oriented computer programming language commonly used to create interactive effects within web browsers<br>
-					<input type="radio" id="mc" name="question4" value="the document as nodes and objects">the document as nodes and objects<br>
-					<input type="radio" id="mc" name="question4" value="e">Document Object Model<br>
-					<input type="radio" id="mc" name="question4" value="f">is an application programming interface (API) for HTML and XML documents.<br>
-				
-					<p>5. What does Javascript can do?</p>
-					<input type="radio" id="mc" name="question5" value="It can add/modify/remove">It can add/modify/remove<br>
-					<input type="radio" id="mc" name="question5" value="g">get element<br>
-					<input type="radio" id="mc" name="question5" value="h">accessed and manipulate<br>
-					<input type="radio" id="mc" name="question5" value="i">expose an API<br>
-
-					<p>6. A parsed HTML document is represented by a?</p>
-					<input type="radio" id="mc" name="question6" value="j">Window<br>
-					<input type="radio" id="mc" name="question6" value="k">Navigator<br>
-					<input type="radio" id="mc" name="question6" value="DOM tree">DOM tree<br>
-					<input type="radio" id="mc" name="question6" value="l">Text<br>
-
-					<p>7. An API that allows access to HTML document from within scripts associated with the web page</p>
-					<input type="radio" id="mc" name="question7" value="Document Object Model">Document Object Model<br>
-					<input type="radio" id="mc" name="question7" value="m">JavaScript Execution<br>
-					<input type="radio" id="mc" name="question7" value="n">JavaScript Web<br>
-					<input type="radio" id="mc" name="question7" value="o">DOM tree<br>
-
-					<p>8. All are functionalities to retrieve reference to nodes in the DOM except:</p>
-					<input type="radio" id="mc" name="question8" value="p">getElementbyId()<br>
-					<input type="radio" id="mc" name="question8" value="adoptNode()">adoptNode()<br>
-					<input type="radio" id="mc" name="question8" value="q">getElementsByTagName()<br>
-					<input type="radio" id="mc" name="question8" value="r">querySelector()<br>
-
-					<p>9. The DOM Tree contains what?</p>
-					<input type="radio" id="mc" name="question9" value="Nodes">Nodes<br>
-					<input type="radio" id="mc" name="question9" value="s">Object<br>
-					<input type="radio" id="mc" name="question9" value="t">JavaScript<br>
-					<input type="radio" id="mc" name="question9" value="u">Web<br>
-
-					<p>10. All are represeting nodes except for?</p>
-					<input type="radio" id="mc" name="question10" value="v">Elements<br>
-					<input type="radio" id="mc" name="question10" value="w">Element Attributes<br>
-					<input type="radio" id="mc" name="question10" value="x">Textual Content<br>
-					<input type="radio" id="mc" name="question10" value="Storage">Storage<br>
-
-					<p>11. All are functionalities to manipulate DOM Tree except for?</p>
-					<input type="radio" id="mc" name="question11" value="normalize()">normalize()<br>
-					<input type="radio" id="mc" name="question11" value="y">adoptNode()<br>
-					<input type="radio" id="mc" name="question11" value="z">insertBefore()<br>
-					<input type="radio" id="mc" name="question11" value="aa">appendChild()<br>
-
-					<p>12. All are funtionalities to style handling exept for?</p>
-					<input type="radio" id="mc" name="question12" value="ab">styleSheets<br>
-					<input type="radio" id="mc" name="question12" value="ac">cssRules<br>
-					<input type="radio" id="mc" name="question12" value="dispatchStyle">dispatchStyle<br>
-					<input type="radio" id="mc" name="question12" value="ad">insertRule<br>
-
-					<p>13. All are functionalities to event handling except?</p>
-					<input type="radio" id="mc" name="question13" value="ae">addEventListener()<br>
-					<input type="radio" id="mc" name="question13" value="removeAttribute()">removeAttribute()<br>
-					<input type="radio" id="mc" name="question13" value="af">dispatchEvent()<br>
-					<input type="radio" id="mc" name="question13" value="ag">removeEventListener()<br>
-
-					<p>14. All are functionalities to construct/ copy nodes except for?</p>
-					<input type="radio" id="mc" name="question14" value="ah">normalize()<br>
-					<input type="radio" id="mc" name="question14" value="ai">adoptNode()<br>
-					<input type="radio" id="mc" name="question14" value="aj">insertBefore()<br>
-					<input type="radio" id="mc" name="question14" value="adoptNode()">adoptNode()<br>
-
-					<p>15. All are functionalities to traverse the DOM tree (to a given node) excpet for?</p>
-					<input type="radio" id="mc" name="question15" value="ak">parentNode<br>
-					<input type="radio" id="mc" name="question15" value="al">childNodes<br>
-					<input type="radio" id="mc" name="question15" value="appendChild">appendChild<br>
-					<input type="radio" id="mc" name="question15" value="am">firstChild<br>
-
-					<center><input type="button" id="button" value="Done" onclick="done();"></center>
-
-			</form>
+	<div class="header">
+		<span>Welcome to Java Script Quiz</span>
+		<div id="results" >
+			<h2>Your scored : Not yet attempted</h2>
 		</div>
 	</div>
-
-	<center>
-	<div id="after_submit">
-	
-		<p id = "message"></p>
-		<p id="numberOfCorrect"></p>
+	<div class="container">
+		<form id="quiz" name="quiz" onsubmit="return onSubmit()">
+			<div class="question">
+				<p>1. What is the Acronym for "JS"?</p>
+				<input type="radio" name="question1" value="a">Jason Script<br>
+				<input type="radio" name="question1" value="b">Java Script<br>
+				<input type="radio" name="question1" value="c">Java Scale<br>
+				<input type="radio" name="question1" value="d">Jason Scale<br>
+			</div>
+			<div class="question">
+				<p>2. What is the Acronym for "DOM"?</p>
+				<input type="radio" name="question2" value="a">Document Object Model<br>
+				<input type="radio" name="question2" value="b">Documentation Object Model<br>
+				<input type="radio" name="question2" value="c">Documentation Object Manual<br>
+				<input type="radio" name="question2" value="d">Document Object Manual<br>
+			</div>
+			<div class="question">
+				<p>3. What does DOM means?</p>
+				<input type="radio" name="question3" value="a">building fast and scalable network applications.<br>
+				<input type="radio" name="question3" value="b">code is written into an HTML page.<br>
+				<input type="radio" name="question3" value="c">is most commonly used as a client side scripting language<br>
+				<input type="radio" name="question3" value="d">is an application programming interface (API) for HTML and XML documents.<br>
+			</div>
+			<div class="question">
+				<p>4. What does DOM represents?</p>
+				<input type="radio" name="question4" value="a">an object-oriented computer programming language commonly used to create interactive effects within web browsers<br>
+				<input type="radio" name="question4" value="b">the document as nodes and objects<br>
+				<input type="radio" name="question4" value="c">Document Object Model<br>
+				<input type="radio" name="question4" value="d">is an application programming interface (API) for HTML and XML documents.<br>
+			</div>
+			<div class="question">
+				<p>5. What does Javascript can do?</p>
+				<input type="radio" name="question5" value="a">It can add/modify/remove<br>
+				<input type="radio" name="question5" value="b">get element<br>
+				<input type="radio" name="question5" value="c">accessed and manipulate<br>
+				<input type="radio" name="question5" value="d">expose an API<br>
+				<input type="radio" name="question5" value="e">all of the above<br>
+			</div>
+			<div class="question">
+				<p>6. A parsed HTML document is represented by a?</p>
+				<input type="radio" name="question6" value="a">Window<br>
+				<input type="radio" name="question6" value="b">Navigator<br>
+				<input type="radio" name="question6" value="c">DOM tree<br>
+				<input type="radio" name="question6" value="d">Text<br>
+			</div>
+			<div class="question">
+				<p>7. An API that allows access to HTML document from within scripts associated with the web page</p>
+				<input type="radio" name="question7" value="a">Document Object Model<br>
+				<input type="radio" name="question7" value="b">JavaScript Execution<br>
+				<input type="radio" name="question7" value="c">JavaScript Web<br>
+				<input type="radio" name="question7" value="d">DOM tree<br>
+			</div>
+			<div class="question">
+				<p>8. All are functionalities to retrieve reference to nodes in the DOM except:</p>
+				<input type="radio" name="question8" value="a">getElementbyId()<br>
+				<input type="radio" name="question8" value="b">adoptNode()<br>
+				<input type="radio" name="question8" value="c">getElementsByTagName()<br>
+				<input type="radio" name="question8" value="d">querySelector()<br>
+			</div>
+			<div class="question">
+				<p>9. The DOM Tree contains what?</p>
+				<input type="radio" name="question9" value="a">Nodes<br>
+				<input type="radio" name="question9" value="b">Object<br>
+				<input type="radio" name="question9" value="c">JavaScript<br>
+				<input type="radio" name="question9" value="d">Web<br>
+			</div>
+			<div class="question">
+				<p>10. All are represeting nodes except for?</p>
+				<input type="radio" name="question10" value="a">Elements<br>
+				<input type="radio" name="question10" value="b">Element Attributes<br>
+				<input type="radio" name="question10" value="c">Textual Content<br>
+				<input type="radio" name="question10" value="d">Storage<br>
+			</div>
+			<div class="question">
+				<p>11. All are functionalities to manipulate DOM Tree except for?</p>
+				<input type="radio" name="question11" value="a">normalize()<br>
+				<input type="radio" name="question11" value="b">adoptNode()<br>
+				<input type="radio" name="question11" value="c">insertBefore()<br>
+				<input type="radio" name="question11" value="d">appendChild()<br>
+			</div>
+			<div class="question">
+				<p>12. All are funtionalities to style handling exept for?</p>
+				<input type="radio" name="question12" value="a">styleSheets<br>
+				<input type="radio" name="question12" value="b">cssRules<br>
+				<input type="radio" name="question12" value="c">dispatchStyle<br>
+				<input type="radio" name="question12" value="d">insertRule<br>
+			</div>
+				<div class="question">
+				<p>13. All are functionalities to event handling except?</p>
+				<input type="radio" name="question13" value="a">addEventListener()<br>
+				<input type="radio" name="question13" value="b">removeAttribute()<br>
+				<input type="radio" name="question13" value="c">dispatchEvent()<br>
+				<input type="radio" name="question13" value="d">removeEventListener()<br>
+			</div>
+			<div class="question">
+				<p>14. All are functionalities to construct/ copy nodes except for?</p>
+				<input type="radio" name="question14" value="a">normalize()<br>
+				<input type="radio" name="question14" value="b">adoptNode()<br>
+				<input type="radio" name="question14" value="c">insertBefore()<br>
+				<input type="radio" name="question14" value="d">adoptNode()<br>
+			</div>
+			<div class="question">
+				<p>15. All are functionalities to traverse the DOM tree (to a given node) excpet for?</p>
+				<input type="radio" name="question15" value="a">parentNode<br>
+				<input type="radio" name="question15" value="b">childNodes<br>
+				<input type="radio" name="question15" value="c">appendChild<br>
+				<input type="radio" name="question15" value="d">firstChild<br>
+			</div>
+			<center><button type="submit">Submit</button></center>
+		</form>
 	</div>
-	</center>
-
 </body>
 </html>

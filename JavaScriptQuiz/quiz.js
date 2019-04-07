@@ -1,98 +1,57 @@
-function done() {
+function onSubmit(){
 
-	var question1 = document.quiz.question1.value;
-	var question2 = document.quiz.question2.value;
-	var question3 = document.quiz.question3.value;
-	var question4 = document.quiz.question4.value;
-	var question5 = document.quiz.question5.value;
-	var question6 = document.quiz.question6.value;
-	var question7 = document.quiz.question7.value;
-	var question8 = document.quiz.question8.value;
-	var question9 = document.quiz.question9.value;
-	var question10 = document.quiz.question10.value;
-	var question11 = document.quiz.question11.value;
-	var question12 = document.quiz.question12.value;
-	var question13 = document.quiz.question13.value;
-	var question14 = document.quiz.question14.value;
-	var question15 = document.quiz.question15.value;
-	var correct = 0;
+	var score = 0;
+	var numOfQuestions = 15; // number of Questions
+	var answerArr = ['b', 'a', 'd', 'b', 'e', 'c', 'a', 'b', 'c', 'd', 'a', 'c', 'b', 'd', 'c']; // the variable answer
 
-	if (question1 == "JavaScript") {
-		correct++;
-	}
+	/**
+	get the questions and store the answers to the question into a variable
+	access the quiz and question
+	*/
+	var question1 = document.forms['quiz']['question1'].value;
+	var question2 = document.forms['quiz']['question2'].value;
+	var question3 = document.forms['quiz']['question3'].value;
+	var question4 = document.forms['quiz']['question4'].value;
+	var question5 = document.forms['quiz']['question5'].value;
 
-	if (question1 == "Java Script") {
-		correct++;
-	}
+	var question6 = document.forms['quiz']['question6'].value;
+	var question7 = document.forms['quiz']['question7'].value;
+	var question8 = document.forms['quiz']['question8'].value;
+	var question9 = document.forms['quiz']['question9'].value;
+	var question10 = document.forms['quiz']['question10'].value;
 
-	if (question1 == "java script") {
-		correct++;
-	}
+	var question11 = document.forms['quiz']['question11'].value;
+	var question12 = document.forms['quiz']['question12'].value;
+	var question13 = document.forms['quiz']['question13'].value;
+	var question14 = document.forms['quiz']['question14'].value;
+	var question15 = document.forms['quiz']['question15'].value;
 
-	if (question1 == "javascript") {
-		correct++;
-	}
-
-	if (question2 == "Document Object Model") {
-		correct++;
+	/**
+	This for loop is to check if there is any questions you missed while answering
+	*/
+	for(var i=1; i <= numOfQuestions; i++){
+		if(eval('question' + i) == ''){
+			alert("You missed question number " + i);
+		}
 	}
 
-	if (question2 == "document object model") {
-		correct++;
-	}
-	
-	if (question3 == "is an application programming interface") {
-		correct++;
-	}
-	
-	if (question4 == "the document as nodes and objects") {
-		correct++;
-	  }
-	
-	
-	if (question5 == "It can add/modify/remove") {
-		correct++;
+	/**
+	This for loop tally the correct answer
+	*/
+	for (var i=1; i <= numOfQuestions; i++) {
+		if(eval('question' + i) == answerArr[i - 1]){
+			score ++;
+		}
 	}
 
-	if (question6 == "DOM tree") {
-		correct++;
-	}		
-	
-	if (question7 == "Document Object Model") {
-		correct++;
-	}
+	/**
+	output store the document getting the elemtent by its ID
+	and displays an alert message of your score including in the header score
+	*/
+	alert(document.getElementById("results").innerHTML = "You got " + score + " correct answers."); 
+	results.innerHTML = "<h2>You scored: " + score + " points out of " + numOfQuestions +"</h2>";
+	return false;
 
-	if (question8 == "adoptNode()") {
-		correct++;
-	}
-
-	if (question9 == "Nodes") {
-		correct++;
-	}
-
-	if (question10 == "Storage") {
-		correct++;
-	}
-
-	if (question11 == "normalize()") {
-		correct++;
-	}
-
-	if (question12 == "dispatchStyle") {
-		correct++;
-	}
-
-	if (question13 == "removeAttribute()") {
-		correct++;
-	}
-
-	if (question14 == "adoptNode()") {
-		correct++;
-	}
-
-	if (question15 == "appendChild") {
-		correct++;
-	}
-	document.getElementById("after_submit").style.visibility = "visible";
-	alert(document.getElementById("numberOfCorrect").innerHTML = "You got " + correct + " correct answers.");
 }
+
+
