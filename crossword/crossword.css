@@ -31,9 +31,16 @@ tr{
 	background-color: black;
 }
 
+/* Vironica Leonardo 
+	When the user inputs the right letter in the square, it will turn blue.
+*/
 .itema:valid{
 	background-color: blue;
 }
+
+/* Vironica Leonardo 
+	When the user inputs the wrong letter in the square will remain at it is.
+*/
 
 .itema:invalid{
 	background-color: none;
@@ -46,6 +53,10 @@ input#reset{
 	text-align: center;
 	display: inline-block;
 }
+
+/* Vironica Leonardo 
+	When the user hovers the mouse pointer at the play again button it will turn green
+*/
 
 input#reset:hover{
 	background-color: green;
