@@ -1,9 +1,15 @@
+/**
+ * @author Quiambao, Ryan Christopher R.
+ * @author Ramirez, Jimmy Jr. C.
+ */
 function onSubmit(){
-
+	/**
+	 * numOfQuestions: number of questions
+	 * answerArr: for the answer of the questions.
+	 */
 	var score = 0;
-	var numOfQuestions = 15; // number of Questions
-	var answerArr = ['b', 'a', 'd', 'b', 'e', 'c', 'a', 'b', 'c', 'd', 'a', 'c', 'b', 'd', 'c']; // the variable answer
-
+	var numOfQuestions = 15;
+	var answerArr = ['b', 'a', 'd', 'b', 'e', 'c', 'a', 'b', 'c', 'd', 'a', 'c', 'b', 'd', 'c'];
 	/**
 	get the questions and store the answers to the question into a variable
 	access the quiz and question
