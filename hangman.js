@@ -3,7 +3,7 @@ window.onload = function () {
   var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
         'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
         't', 'u', 'v', 'w', 'x', 'y', 'z'];
-
+  
   var categories;         // Array of topics
   var getHint ;          // Word getHint
   var word ;              // Selected word
@@ -12,7 +12,7 @@ window.onload = function () {
   var lives ;             // Lives
   var counter ;           // Count correct geusses
   var space;             // Number of spaces in word '-'
-  var list;
+  var list;             
 
   // Get elements
   var showLives = document.getElementById("mylives");
@@ -36,12 +36,12 @@ window.onload = function () {
       letters.appendChild(list);
     }
   }
-
-
+    
+  
   // Select Catagory
   var selectCat = function () {
     if (chosenCategory === categories[0]) {
-      catagoryname.innerHTML = "CSS Interactive Learning";
+      catagoryname.innerHTML = "";
     }
   }
 
@@ -66,12 +66,12 @@ window.onload = function () {
       correct.appendChild(guess);
     }
   }
-
+  
   // Show lives
    comments = function () {
-    showLives.innerHTML = "You have " + lives + " lives";
+    showLives.innerHTML = "Moves:" + lives;
     if (lives < 1) {
-      alert(showLives.innerHTML = "Game Over");
+      showLives.innerHTML = "Game Over";
       var unclick = document.getElementById('alphabet');
       unclick.classList.add("unclick");
 
@@ -80,7 +80,7 @@ window.onload = function () {
       if (counter + space === geusses.length) {
         var unclick = document.getElementById('alphabet');
         unclick.classList.add("unclick");
-        alert(showLives.innerHTML = "You Win!");
+        showLives.innerHTML = "You Win!";
       }
     }
   }
@@ -91,7 +91,7 @@ window.onload = function () {
     drawArray[drawMe]();
   }
 
-
+  
    // Hangman
   canvas =  function(){
 
@@ -101,61 +101,68 @@ window.onload = function () {
     context.strokeStyle = "#FFA500";
     context.lineWidth = 2;
   };
-
-    head = function(){
-      myStickman = document.getElementById("stickman");
-      context = myStickman.getContext('2d');
-      context.beginPath();
-      context.arc(60, 25, 10, 0, Math.PI*2, true);
-      context.stroke();
-    }
-
+  
+    
   draw = function($pathFromx, $pathFromy, $pathTox, $pathToy) {
-
+    
     context.moveTo($pathFromx, $pathFromy);
     context.lineTo($pathTox, $pathToy);
-    context.stroke();
+    context.stroke(); 
     context.lineWidth = 3;
 }
-
    frame1 = function() {
-     draw (0, 150, 150, 150);
+     //draw (0, 150, 150, 150);
+     platform.classList.remove("hide");
+      platform.classList.add("show");
    };
-
+   
    frame2 = function() {
-     draw (10, 0, 10, 600);
+     //draw (10, 0, 10, 600);
+     post.classList.remove("hide");
+      post.classList.add("show");
    };
-
+  
    frame3 = function() {
-     draw (0, 5, 70, 5);
+     hang.classList.remove("hide");
+     hang.classList.add("show");
+   };
+  
+   frame4 = function() {
+     rope.classList.remove("hide");
+     rope.classList.add("show");
    };
 
-   frame4 = function() {
-     draw (60, 5, 60, 15);
-   };
+    frame5 = function(){
+      head.classList.remove("hide");
+      head.classList.add("show");
+    };
 
    torso = function() {
-     draw (60, 36, 60, 70);
+     body.classList.remove("hide");
+     body.classList.add("show");
    };
-
-   rightArm = function() {
-     draw (60, 46, 100, 50);
-   };
-
+  
    leftArm = function() {
-     draw (60, 46, 20, 50);
+     leftarm.classList.remove("hide");
+     leftarm.classList.add("show");
    };
-
+  
+   rightArm = function() {
+     rightarm.classList.remove("hide");
+     rightarm.classList.add("show");
+   };
+  
    rightLeg = function() {
-     draw (60, 70, 100, 100);
+     rightleg.classList.remove("hide");
+     rightleg.classList.add("show");
    };
-
+  
    leftLeg = function() {
-     draw (60, 70, 20, 100);
+     leftleg.classList.remove("hide");
+     leftleg.classList.add("show");
    };
-
-  drawArray = [rightLeg, leftLeg, rightArm, leftArm,  torso,  head, frame4, frame3, frame2, frame1];
-
+  
+  drawArray = [rightLeg, leftLeg, rightArm, leftArm,  torso,  frame5, frame4, frame3, frame2, frame1]; 
 
   // OnClick Function
    var check = function () {
@@ -169,8 +176,8 @@ window.onload = function () {
           geusses[i].innerHTML = geuss;
           counter += 1;
           this.classList.remove("active");
-          this.classList.add("green");
-        }
+          this.classList.add("white");
+        } 
       }
       var j = (word.indexOf(geuss));
       if (j === -1) {
@@ -182,14 +189,13 @@ window.onload = function () {
       }
     }
   }
-
-
+  
+    
   // Play
   play = function () {
     categories = [
-        ["attribute selector", "universal selector", "pseudo element", "adjacent sibling combinator", "sibling combinator", "descendant combinator",
-		"class selector","id selector","cascading style sheet","type selector"]
-    ]
+        ["attribute-selector", "universal-selector", "pseudo-element", "sibling-combinator", "descendant-combinator", "class-selector","id-selector","cascading-stylesheet","type-selector"]
+    ];
 
     chosenCategory = categories[Math.floor(Math.random() * categories.length)];
     word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
@@ -208,27 +214,58 @@ window.onload = function () {
   }
 
   play();
-
+  
   // Hint
 
-    hint.onclick = function() {
 
       hints = [
-        [".info", "#info", "*", "&", "Once managed by Phil Brown", "2013 FA Cup runners up", "Gazza's first club"]
+        ["Match elements based on their attributes and attribute values.",
+		"Selects all elements on a page.",
+		":after, ::after, :before, ::before",
+		"Adjacent sibling-combinator and General sibling combinator",
+		"Matches all elements that are descendants of a target element.",
+		"Consist of a dot followed by a class name. A class name can be any value without spaces.",
+		"Consist of a pound sign followed by the ID name given element. It is the most efficient way to select a single element.",
+		"Selectors allow an HTML element to attain precision in terms of styling and/or formatting.",
+		"Selects all elements that match the given node name."]
     ];
 
     var catagoryIndex = categories.indexOf(chosenCategory);
     var hintIndex = chosenCategory.indexOf(word);
-    showClue.innerHTML = "Clue: - " +  hints [catagoryIndex][hintIndex];
-  };
-
-   // Reset
+    showClue.innerHTML = "Hint:  " +  hints [catagoryIndex][hintIndex];
+  
+// Reset
 
   document.getElementById('reset').onclick = function() {
     correct.parentNode.removeChild(correct);
     letters.parentNode.removeChild(letters);
-    showClue.innerHTML = "";
+	var catagoryIndex = categories.indexOf(chosenCategory);
+    var hintIndex = chosenCategory.indexOf(word);
+    showClue.innerHTML = "Hint:  " +  hints [catagoryIndex][hintIndex];
+    
     context.clearRect(0, 0, 400, 400);
+
+    platform.classList.remove("show");
+    platform.classList.add("hide");
+    post.classList.remove("show");
+    post.classList.add("hide");
+    hang.classList.remove("show");
+    hang.classList.add("hide");
+    rope.classList.remove("show");
+    rope.classList.add("hide");
+    head.classList.remove("show");
+    head.classList.add("hide");
+    body.classList.remove("show");
+    body.classList.add("hide");
+    rightarm.classList.remove("show");
+    rightarm.classList.add("hide");
+    leftarm.classList.remove("show");
+    leftarm.classList.add("hide");
+    leftleg.classList.remove("show");
+    leftleg.classList.add("hide");
+    rightleg.classList.remove("show");
+    rightleg.classList.add("hide");
+
     play();
   }
 }
